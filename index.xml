@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Abhinav.Kumar</title>
+    <link>https://abhinav1107.github.io/</link>
+    <description>Recent content on Abhinav.Kumar</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 03 May 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://abhinav1107.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About me</title>
+      <link>https://abhinav1107.github.io/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://abhinav1107.github.io/about/</guid>
+      <description>If I have to describe myself professionally in one sentence, I would probably say &amp;ldquo;I fix things&amp;rdquo;. This is not something of a trait that I picked along working. I have been fixing things as long as I could remember. My oldest memory related to fixing something is from 4th standard. I came home from school and wanted to &amp;ldquo;fix&amp;rdquo; a fused bulb. Somehow attached the filament and inserted it in its socket.</description>
+    </item>
+    
+    <item>
+      <title>Hello World!</title>
+      <link>https://abhinav1107.github.io/blog/hello-world/</link>
+      <pubDate>Thu, 03 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://abhinav1107.github.io/blog/hello-world/</guid>
+      <description>Ahoy there fellow internet Person.
+There is one thing that&amp;rsquo;s common between people with programming backgrounds. Hello World. This is something that gets injected to our DNA. And for rest of our lives we tend to keep using it, consciously or unconsciously. Computers have made me who I am today. So, obviously my first post had to be Hello World.
+The intention of starting this blog is just to occupy tiny space on this internet universe, leaving my footprint behind.</description>
+    </item>
+    
+  </channel>
+</rss>

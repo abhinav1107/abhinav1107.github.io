@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Abhinav.Kumar</title>
+    <link>https://abhinav1107.github.io/categories/</link>
+    <description>Recent content in Categories on Abhinav.Kumar</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	<atom:link href="https://abhinav1107.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hello</title>
+      <link>https://abhinav1107.github.io/categories/hello/</link>
+      <pubDate>Thu, 03 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://abhinav1107.github.io/categories/hello/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
