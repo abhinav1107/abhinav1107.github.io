@@ -5,7 +5,9 @@
     <link>https://abhinav1107.github.io/</link>
     <description>Recent content on Abhinav.Kumar</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 03 May 2018 00:00:00 +0000</lastBuildDate>
+    <language>en-us</language>
+    <copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright>
+    <lastBuildDate>Mon, 14 May 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://abhinav1107.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -17,6 +19,16 @@
       
       <guid>https://abhinav1107.github.io/about/</guid>
       <description>If I have to describe myself professionally in one sentence, I would probably say &amp;ldquo;I fix things&amp;rdquo;. This is not something of a trait that I picked along working. I have been fixing things as long as I could remember. My oldest memory related to fixing something is from 4th standard. I came home from school and wanted to &amp;ldquo;fix&amp;rdquo; a fused bulb. Somehow attached the filament and inserted it in its socket.</description>
+    </item>
+    
+    <item>
+      <title>How learning Python has changed my life</title>
+      <link>https://abhinav1107.github.io/blog/how-learning-python-has-changed-my-life/</link>
+      <pubDate>Mon, 14 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://abhinav1107.github.io/blog/how-learning-python-has-changed-my-life/</guid>
+      <description>Hello there,
+Today I would like to share my Python learning journey with you. Before I even begin, I would like to make it clear that I in no way am a master of Python programming language. I have just been able to scratch the surface of an extremely vast topic. It&amp;rsquo;s just the beginning and I have a long long long way to go. But there is a reason why I wanted to share this learning journey with everyone.</description>
     </item>
     
     <item>
