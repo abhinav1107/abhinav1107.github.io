@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright>
-    <lastBuildDate>Mon, 14 May 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 20 May 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://abhinav1107.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -19,6 +19,15 @@
       
       <guid>https://abhinav1107.github.io/about/</guid>
       <description>If I have to describe myself professionally in one sentence, I would probably say &amp;ldquo;I fix things&amp;rdquo;. This is not something of a trait that I picked along working. I have been fixing things as long as I could remember. My oldest memory related to fixing something is from 4th standard. I came home from school and wanted to &amp;ldquo;fix&amp;rdquo; a fused bulb. Somehow attached the filament and inserted it in its socket.</description>
+    </item>
+    
+    <item>
+      <title>Auto update a Python package using Git repository</title>
+      <link>https://abhinav1107.github.io/blog/auto-update-a-python-package-using-git-repository/</link>
+      <pubDate>Sun, 20 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://abhinav1107.github.io/blog/auto-update-a-python-package-using-git-repository/</guid>
+      <description>We, at work, are exclusively Ansible oriented. Most of our day-to-day work happens using Ansible. But there is a big problem when it comes to using Ansible. I really can&amp;rsquo;t call it a problem though. It&amp;rsquo;s just the way Ansible works. Ansible uses a push based model, meaning if you want some changes reflected on target machines, you have to push those changes using a controller machine. There is something called ansible-pull which uses pull based model, but we (more specifically I) haven&amp;rsquo;t used it yet, so I am not going to talk about it.</description>
     </item>
     
     <item>

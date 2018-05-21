@@ -6,23 +6,23 @@
 	<meta name="author" content="Abhinav Kumar">
 
 
-    <meta name="description" content="My slow but steady transition from a sysadmin to a better sysadmin or a DevOps">
-    <meta name="keywords" content="[learning python]">
-    <title>How learning Python has changed my life :: Abhinav.Kumar</title>
+    <meta name="description" content="A &#34;hackish&#34; way to automatically self update a custom python package hosted using git repo">
+    <meta name="keywords" content="[python packaging self-update]">
+    <title>Auto update a Python package using Git repository :: Abhinav.Kumar</title>
 
     <meta property="og:type" content="article">
-    <meta property="og:title" content="How learning Python has changed my life :: Abhinav.Kumar">
-    <meta property="og:description" content="My slow but steady transition from a sysadmin to a better sysadmin or a DevOps">
+    <meta property="og:title" content="Auto update a Python package using Git repository :: Abhinav.Kumar">
+    <meta property="og:description" content="A &#34;hackish&#34; way to automatically self update a custom python package hosted using git repo">
 	
 		
 		
-		<meta property="og:image" content="https://abhinav1107.github.io/blog/img/how-learning-python-has-changed-my-life.jpg">
+		<meta property="og:image" content="https://abhinav1107.github.io/blog/img/auto-update-a-python-package-using-git-repository.jpg">
 		
 	
-	<meta property="og:url" content="https://abhinav1107.github.io/blog/how-learning-python-has-changed-my-life/">
+	<meta property="og:url" content="https://abhinav1107.github.io/blog/auto-update-a-python-package-using-git-repository/">
 
-    <meta property="twitter:title" content="How learning Python has changed my life :: Abhinav.Kumar">
-    <meta property="twitter:description" content="My slow but steady transition from a sysadmin to a better sysadmin or a DevOps">
+    <meta property="twitter:title" content="Auto update a Python package using Git repository :: Abhinav.Kumar">
+    <meta property="twitter:description" content="A &#34;hackish&#34; way to automatically self update a custom python package hosted using git repo">
 
     <meta property="og:site_name" content="Abhinav.Kumar">
     <meta property="og:locale" content="en-us">
@@ -116,12 +116,12 @@
 
                 <article class="post">
                     <header class="entry-header">
-                        <h1 class="entry-title"><a href="https://abhinav1107.github.io/blog/how-learning-python-has-changed-my-life/" rel="bookmark">How learning Python has changed my life</a></h1>
+                        <h1 class="entry-title"><a href="https://abhinav1107.github.io/blog/auto-update-a-python-package-using-git-repository/" rel="bookmark">Auto update a Python package using Git repository</a></h1>
                         <div class="entry-meta">
                             <span class="posted-on">
-                                <time class="entry-date published" date="2018-05-14 00:00:00 &#43;0000 UTC">14.05.2018</time>
+                                <time class="entry-date published" date="2018-05-20 00:00:00 &#43;0000 UTC">20.05.2018</time>
                                 &nbsp;&nbsp;&nbsp;&nbsp;
-                                (~5 min)
+                                (~4 min)
                             </span>
                         </div>
                     </header>
@@ -129,43 +129,65 @@
                         
                         
                         <div class="entry-image text-center">
-                            <img src="../img/how-learning-python-has-changed-my-life.jpg" alt="How learning Python has changed my life" />
+                            <img src="../img/auto-update-a-python-package-using-git-repository.jpg" alt="Auto update a Python package using Git repository" />
                         </div>
                         
                     
                     <div class="entry-content">
-                        <p>Hello there,</p>
+                        <p>We, at work, are exclusively Ansible oriented. Most of our day-to-day work happens using Ansible. But there is a big problem when it comes to using Ansible. I really can&rsquo;t call it a problem though. It&rsquo;s just the way Ansible works. Ansible uses a push based model, meaning if you want some changes reflected on target machines, you have to push those changes using a controller machine. There is something called <a href="http://docs.ansible.com/ansible/latest/cli/ansible-pull.html">ansible-pull</a> which uses pull based model, but we (more specifically I) haven&rsquo;t used it yet, so I am not going to talk about it. Now, coming back to the problem. Everyday we write a lot of python scripts/module/packages that we use in our automation. But the problem is every time those Python codes are updated, we have to push those changes to all machines in our infra. This is where a Puppet like model helps, but that model has it&rsquo;s own shortcomings. So, I decided to come up with a way to get these Python code updated every time there are changes.</p>
 
-<p>Today I would like to share my <a href="https://www.python.org/">Python</a> learning journey with you. Before I even begin, I would like to make it clear that I in no way am a master of Python programming language. I have just been able to scratch the surface of an extremely vast topic. It&rsquo;s just the beginning and I have a long long long way to go. But there is a reason why I wanted to share this learning journey with everyone.</p>
+<p>TL;DR At my current work, I wanted to make my life easier by coming up with a way where every time I or anyone else updates Python code/scripts/modules, that should get reflected in places where they are getting used.</p>
 
-<p>Year 2002 was when I touched a computer for the first time and then got my very own computer in 2003. I would end up using it mostly for computer gaming and writing some programs using Turbo C. This didn&rsquo;t change till end of 2007. That&rsquo;s when I got my first job as System Administrator / Technical Support Representative. My team started mentoring me and learning new things almost everyday was so exciting that I forgot about computer gaming almost entirely. That&rsquo;s where my actual programming journey got it&rsquo;s push.</p>
+<p>To be able to achieve this, first thing I needed was to have a git repo which we can control exclusively. No one could commit directly to it&rsquo;s master branch. So, I created a separate Git repo with all Python code related files and locked it for direct master commits. Achieving this is very easy. Google it if you want to find out how to do that.</p>
 
-<p>For my first work, I had to do a lot of manual work. This is when I decided I would start automating things. And that&rsquo;s when I was introduced to <a href="https://www.gnu.org/software/bash/">BASH</a>. It was love at first sight to be honest. I started writing several scripts. Taking backups, cleaning older logs, server/application installation and configuration and so many other things. You name it, I did it. As time went by, I eventually got so comfortable with BASH that in my last job I wrote an entire app using BASH, Apache and CGI. It wasn&rsquo;t a fancy web app, rather just a simple web based tool for managing Samba shares and user quota. And this was early 2015.</p>
+<p>Then I created a <a href="https://docs.python.org/3/tutorial/modules.html#packages"><code>__init__py</code></a> file under that repo. As described in reference link, the <code>__init__.py</code> is a special file and I would really encourage you to go ahead and read it if you want to understand how Python uses packages and modules. The code for <code>__init__.py</code> is this:
+<script src="https://gist.github.com/abhinav1107/48938cc53bfb293a32846aaaa55230ab.js"></script></p>
 
-<p>Till this point, I never felt the need to learn anything else. BASH and Ansible worked for me. All these while, a subset of my friends/colleagues kept telling me to learn one proper programming language to make my life easier. And I kept telling them that what I do on a day to day basis, no one can beat BASH. Then came a JIRA ticket where I was assigned a task to ensure that all Jenkins jobs are configured to run either without labels or if job has used a label, then it should be from a list of known labels. This helps immensely in those cases where you would want to import Jenkins jobs from one environment to others.</p>
+<p>Let&rsquo;s demonstrate this with an example. Let&rsquo;s assume your Python package looks something like what&rsquo;s hosted at my <a href="https://github.com/abhinav1107/demo_supp">demo_supp</a> (that&rsquo;s the best name I could come up with, so never mind)</p>
 
-<p>This is what I wrote:
-<script src="https://gist.github.com/abhinav1107/6ea9d7a3f288d6c8e65f6333023602f4.js"></script></p>
+<p>And here is the screen shot of the same in action
+<a data-flickr-embed="true"  href="https://www.flickr.com/photos/109446163@N05/41519714354/in/album-72157695319518191/" title="gitdemo1"><img src="https://farm1.staticflickr.com/973/41519714354_5a605f5a03_c.jpg" width="800" height="310" alt="gitdemo1"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p>It was supposed to be a <a href="https://sensu.io/">Sensu</a> check. And as of this writing, running script is almost same. This JIRA ticket made me realise that you should always pick the right tool for the job, not the tool that you are most comfortable with all the time.</p>
+<p>As shown in the screenshot, here is the code used for my test script:</p>
 
-<p>Picking Python as my first full fledged programming language was a no brainer. One of the biggest plus points for me was that the syntax made sense out of the box. I didn&rsquo;t have to struggle through online documentation of finding what is what. I know a lot of you might not or will not agree. But this is what I feel was the biggest reason for me. here is what I wrote as my first script in Python:</p>
+<pre><code class="language-python">#!/usr/bin/env python
 
-<script src="https://gist.github.com/abhinav1107/471df18abf140dc816902a249be419cf.js"></script>
+import sys
+sys.path.insert(0, '/tmp')
+from demo_supp.base_class1 import MyBaseClass1, MyBaseClass2
 
-<p>I was literally on the Moon after this script executed successfully for the first time. But this was still not enough. I would end up writing a lot of scripts. Most of these scripts had overlapping work or use cases. Writing something once is good, writing something twice is still ok, but writing same thing again and again is not ok. This is where <a href="https://en.wikipedia.org/wiki/Object-oriented_programming">OOP</a> comes in. I had tried understanding OOP before, but miserably failed at it. Every time I asked someone how did they got better at writing Classes, they gave the same answer. Keep practicing. And this never convinced me. To me it was like a continuous loop problem. To be able to understand OOP, you need to write Classes and to be able to write Classes, you need to understand OOP.</p>
+my_obj1 = MyBaseClass1()
+my_obj2 = MyBaseClass2()
 
-<p>This struggle with Classes continued, in the meanwhile I wrote some Sensu Scripts in Python which worked really well. While working with one of the Sensu Checks, I ended up asking a <a href="https://goo.gl/qhxs6p">Stackoverflow Question</a>. The more work I did in Python, my confidence grew more. At this point, I started reading other&rsquo;s work in Python. This is where things started becoming interesting. Every new Class helped me understand what it meant and what the programmer was trying to achieve. And thus my OOP journey began. As of now, I can write simple reusable Classes and create packages. The idea is to be more comfortable with Python as a programming language.</p>
+print(my_obj1.get_base_string())
+my_obj2.base_class2_function1()
+</code></pre>
 
-<p>In last few days, this ability to at least understand the code (irrespective of the programming language it&rsquo;s written in) has given me a different kind of self confidence. I try and see things differently now. The code doesn&rsquo;t scare me anymore. The kind of work that I do on a day-to-day basis, this procedural approach is never going to go away, but I am loving the OOP way.</p>
+<p>My demo_supp repo was checked out at <code>/tmp</code> directory. That&rsquo;s why I am appending that directory to PYTHONPATH so that Python will look for packages in that directory. Now notice how the first time when script ran, it prints</p>
 
-<p>The lesson from all this is nothing is easy and nothing is hard in this world. It&rsquo;s about how dedicated you are to achieve things. Don&rsquo;t lose faith in your self just because you have had some early set backs. Keep doing things. Start small and gradually build up the knowledge.</p>
+<pre><code class="language-text">I am in updated demo function1
+Do something cool here with MyVariable
+I am in updated demo function2
+I am the init string in base class 1
+do something cooler here with MyVariable
+</code></pre>
 
-<p>Until next time.</p>
+<p>Then I go ahead and made some changed to git repo using Github&rsquo;s UI. In 2nd run, even though nothing else was done, the test script outputs this</p>
 
-<ul class="task-list">
-<li><label><input type="checkbox" disabled class="task-list-item"> fix grammar and spelling mistakes</label></li>
-</ul>
+<pre><code class="language-text">I am in updated demo function1
+UPDATED: Do something cool here with MyVariable
+I am in updated demo function2
+I am the init string in base class 1
+UPDATED: do something cooler here with MyVariable
+</code></pre>
+
+<p>It automatically updated the repo before printing that output. So, there you have it. Doesn&rsquo;t matter where your code is, as long as it has git command line utility and ability to connect to remote git repo, the local package files will be automatically updated every time there is changes in them. That&rsquo;s it for now. I hope someone find this useful. :)</p>
+
+<p>Some Note:
+- This code is under testing phase as of this writing. If something breaks, I will be updating it.
+- If you intend to use it, use it on your own risk please. Ensure it suits your requirements.</p>
+
+<p>Happy coding!</p>
 
                     </div>
 
@@ -182,22 +204,18 @@
 
                         <center>
                             
-                                <a href="https://abhinav1107.github.io/categories/learning">
-                                    <span class="label label-default">learning</span>
-                                </a>
-                            
                                 <a href="https://abhinav1107.github.io/categories/python">
                                     <span class="label label-default">python</span>
+                                </a>
+                            
+                                <a href="https://abhinav1107.github.io/categories/python-package">
+                                    <span class="label label-default">python package</span>
                                 </a>
                             
                         </center>
                     </div>
 
                     
-                    
-                    <div class="entry-content text-center">
-                        <img src="../img/how-learning-python-has-changed-my-life-summary.jpg" alt="Summary How learning Python has changed my life" />
-                    </div>
                     
 
                 </article>
@@ -219,9 +237,9 @@
                          data-network="twitter"
                          data-url=""
                          data-short-url=""
-                         data-title="How learning Python has changed my life >>"
+                         data-title="Auto update a Python package using Git repository >>"
                          data-image=""
-                         data-description="My slow but steady transition from a sysadmin to a better sysadmin or a DevOps"
+                         data-description="A &#34;hackish&#34; way to automatically self update a custom python package hosted using git repo"
                          data-username="abhinav1107"
                          data-message="">
                         <i class="fa fa-twitter-square fa-2x"></i>
@@ -237,9 +255,9 @@
                          data-network="linkedin"
                          data-url=""
                          data-short-url=""
-                         data-title="How learning Python has changed my life >>"
+                         data-title="Auto update a Python package using Git repository >>"
                          data-image=""
-                         data-description="My slow but steady transition from a sysadmin to a better sysadmin or a DevOps"
+                         data-description="A &#34;hackish&#34; way to automatically self update a custom python package hosted using git repo"
                          data-username="abhinav1107"
                          data-message="">
                         <i class="fa fa-linkedin-square fa-2x"></i>
@@ -253,16 +271,16 @@
                          data-network=""
                          data-url=""
                          data-short-url=""
-                         data-title="How learning Python has changed my life >>"
+                         data-title="Auto update a Python package using Git repository >>"
                          data-image=""
-                         data-description="My slow but steady transition from a sysadmin to a better sysadmin or a DevOps"
+                         data-description="A &#34;hackish&#34; way to automatically self update a custom python package hosted using git repo"
                          data-username="abhinav1107"
                          data-message="">
                         <i class="fa fa-rss-square fa-2x"></i>
                     </div>
                 
             
-            <div class="st-custom-button" data-network="sharethis" data-title="How learning Python has changed my life >> ">
+            <div class="st-custom-button" data-network="sharethis" data-title="Auto update a Python package using Git repository >> ">
                 <i class="fa fa-share-alt-square fa-2x"></i>
             </div>
         
@@ -308,7 +326,7 @@ s.setAttribute('data-timestamp', +new Date());
                 
                     <ul class="pagination">
                         <li>
-                            <a href="https://abhinav1107.github.io/blog/hello-world/" rel="prev" title="Hello World!" aria-label="Previous">
+                            <a href="https://abhinav1107.github.io/blog/how-learning-python-has-changed-my-life/" rel="prev" title="How learning Python has changed my life" aria-label="Previous">
                                 <i class="fa fa-angle-double-left" aria-hidden="true"></i> <i>Previous article</i>
                             </a>
                         </li>
@@ -316,14 +334,6 @@ s.setAttribute('data-timestamp', +new Date());
                 
             </div>
             <div class="col-xs-6 col-sm-4 text-right">
-                
-                    <ul class="pagination">
-                        <li>
-                            <a href="https://abhinav1107.github.io/blog/auto-update-a-python-package-using-git-repository/" rel="next" title="Auto update a Python package using Git repository" aria-label="Next">
-                                <i>Next article</i> <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                    </ul>
                 
             </div>
         </div>

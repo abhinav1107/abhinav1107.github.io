@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Python on Abhinav.Kumar</title>
-    <link>https://abhinav1107.github.io/tags/python/</link>
-    <description>Recent content in Python on Abhinav.Kumar</description>
+    <title>Python Package on Abhinav.Kumar</title>
+    <link>https://abhinav1107.github.io/categories/python-package/</link>
+    <description>Recent content in Python Package on Abhinav.Kumar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright>
     <lastBuildDate>Sun, 20 May 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://abhinav1107.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://abhinav1107.github.io/categories/python-package/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -19,16 +19,6 @@
       
       <guid>https://abhinav1107.github.io/blog/auto-update-a-python-package-using-git-repository/</guid>
       <description>We, at work, are exclusively Ansible oriented. Most of our day-to-day work happens using Ansible. But there is a big problem when it comes to using Ansible. I really can&amp;rsquo;t call it a problem though. It&amp;rsquo;s just the way Ansible works. Ansible uses a push based model, meaning if you want some changes reflected on target machines, you have to push those changes using a controller machine. There is something called ansible-pull which uses pull based model, but we (more specifically I) haven&amp;rsquo;t used it yet, so I am not going to talk about it.</description>
-    </item>
-    
-    <item>
-      <title>How learning Python has changed my life</title>
-      <link>https://abhinav1107.github.io/blog/how-learning-python-has-changed-my-life/</link>
-      <pubDate>Mon, 14 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://abhinav1107.github.io/blog/how-learning-python-has-changed-my-life/</guid>
-      <description>Hello there,
-Today I would like to share my Python learning journey with you. Before I even begin, I would like to make it clear that I in no way am a master of Python programming language. I have just been able to scratch the surface of an extremely vast topic. It&amp;rsquo;s just the beginning and I have a long long long way to go. But there is a reason why I wanted to share this learning journey with everyone.</description>
     </item>
     
   </channel>
