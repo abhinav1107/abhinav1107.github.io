@@ -6,23 +6,23 @@
 	<meta name="author" content="Abhinav Kumar">
 
 
-    <meta name="description" content="My slow but steady transition from a sysadmin to a better sysadmin or a DevOps">
-    <meta name="keywords" content="[learning python]">
-    <title>How learning Python has changed my life :: Abhinav.Kumar</title>
+    <meta name="description" content="Converting data structure or objects state in python into a format that can be stored/transmitted and recreated later">
+    <meta name="keywords" content="[python serialization marshalling pickle dill]">
+    <title>Python Serialization with Dill :: Abhinav.Kumar</title>
 
     <meta property="og:type" content="article">
-    <meta property="og:title" content="How learning Python has changed my life :: Abhinav.Kumar">
-    <meta property="og:description" content="My slow but steady transition from a sysadmin to a better sysadmin or a DevOps">
+    <meta property="og:title" content="Python Serialization with Dill :: Abhinav.Kumar">
+    <meta property="og:description" content="Converting data structure or objects state in python into a format that can be stored/transmitted and recreated later">
 	
 		
 		
-		<meta property="og:image" content="https://abhinav1107.github.io/blog/img/how-learning-python-has-changed-my-life.jpg">
+		<meta property="og:image" content="https://abhinav1107.github.io/blog/img/python-data-serialization.jpg">
 		
 	
-	<meta property="og:url" content="https://abhinav1107.github.io/blog/how-learning-python-has-changed-my-life/">
+	<meta property="og:url" content="https://abhinav1107.github.io/blog/python-data-serialization/">
 
-    <meta property="twitter:title" content="How learning Python has changed my life :: Abhinav.Kumar">
-    <meta property="twitter:description" content="My slow but steady transition from a sysadmin to a better sysadmin or a DevOps">
+    <meta property="twitter:title" content="Python Serialization with Dill :: Abhinav.Kumar">
+    <meta property="twitter:description" content="Converting data structure or objects state in python into a format that can be stored/transmitted and recreated later">
 
     <meta property="og:site_name" content="Abhinav.Kumar">
     <meta property="og:locale" content="en-us">
@@ -116,12 +116,12 @@
 
                 <article class="post">
                     <header class="entry-header">
-                        <h1 class="entry-title"><a href="https://abhinav1107.github.io/blog/how-learning-python-has-changed-my-life/" rel="bookmark">How learning Python has changed my life</a></h1>
+                        <h1 class="entry-title"><a href="https://abhinav1107.github.io/blog/python-data-serialization/" rel="bookmark">Python Serialization with Dill</a></h1>
                         <div class="entry-meta">
                             <span class="posted-on">
-                                <time class="entry-date published" date="2018-05-14 00:00:00 &#43;0000 UTC">14.05.2018</time>
+                                <time class="entry-date published" date="2018-07-08 00:00:00 &#43;0000 UTC">08.07.2018</time>
                                 &nbsp;&nbsp;&nbsp;&nbsp;
-                                (~5 min)
+                                (~4 min)
                             </span>
                         </div>
                     </header>
@@ -129,39 +129,56 @@
                         
                         
                         <div class="entry-image text-center">
-                            <img src="../img/how-learning-python-has-changed-my-life.jpg" alt="How learning Python has changed my life" />
+                            <img src="../img/python-data-serialization.jpg" alt="Python Serialization with Dill" />
                         </div>
                         
                     
                     <div class="entry-content">
-                        <p>Hello there,</p>
+                        <p>Last week I got to know about a concept called Serialization through a colleague of mine. Till that point, I wasn&rsquo;t even aware something like this existed. And I really liked the concept. So, to better understand it, I thought I will pen it down somewhere. This is my attempt to write what I have understood about <a href="https://docs.python.org/2/library/pickle.html">pickling</a></p>
 
-<p>Today I would like to share my <a href="https://www.python.org/">Python</a> learning journey with you. Before I even begin, I would like to make it clear that I in no way am a master of Python programming language. I have just been able to scratch the surface of an extremely vast topic. It&rsquo;s just the beginning and I have a long long long way to go. But there is a reason why I wanted to share this learning journey with everyone.</p>
+<p>&ldquo;Pickling&rdquo; is a process where a Python object is taken and converted into a byte stream. Once pickling happens, this pickled data can be taken and then un-pickled somewhere. Once un-pickled, this new object can be used as it was like in previous place.</p>
 
-<p>Year 2002 was when I touched a computer for the first time and then got my very own computer in 2003. I would end up using it mostly for computer gaming and writing some programs using Turbo C. This didn&rsquo;t change till end of 2007. That&rsquo;s when I got my first job as System Administrator / Technical Support Representative. My team started mentoring me and learning new things almost everyday was so exciting that I forgot about computer gaming almost entirely. That&rsquo;s where my actual programming journey got it&rsquo;s push.</p>
+<p>In Python this is done using <code>pickle</code> module. But I am going to demonstrate this using another module called <a href="http://dill.readthedocs.io/en/latest/">Dill</a>. Dill is more of less same as pickle, just that it in addition to pickling Python objects, it also provides ability to save the state of an interpreter session in a single command.</p>
 
-<p>For my first work, I had to do a lot of manual work. This is when I decided I would start automating things. And that&rsquo;s when I was introduced to <a href="https://www.gnu.org/software/bash/">BASH</a>. It was love at first sight to be honest. I started writing several scripts. Taking backups, cleaning older logs, server/application installation and configuration and so many other things. You name it, I did it. As time went by, I eventually got so comfortable with BASH that in my last job I wrote an entire app using BASH, Apache and CGI. It wasn&rsquo;t a fancy web app, rather just a simple web based tool for managing Samba shares and user quota. And this was early 2015.</p>
+<p>Everywhere I read about pickling, they all warned about more of less the same things. Here they are:</p>
 
-<p>Till this point, I never felt the need to learn anything else. BASH and Ansible worked for me. All these while, a subset of my friends/colleagues kept telling me to learn one proper programming language to make my life easier. And I kept telling them that what I do on a day to day basis, no one can beat BASH. Then came a JIRA ticket where I was assigned a task to ensure that all Jenkins jobs are configured to run either without labels or if job has used a label, then it should be from a list of known labels. This helps immensely in those cases where you would want to import Jenkins jobs from one environment to others.</p>
+<ul>
+<li><code>pickle</code> module is not secure against erroneous or maliciously constructed data. So never un-pickle data received from untrusted or unauthenticated source.</li>
+<li>The pickle protocol is specific to Python. We can not transfer the information to other languages.</li>
+<li>Not all python data structure can be serialized by pickle.</li>
+<li>No compatibility guaranteed between different version of python as well.</li>
+<li>If version is not specified, the pickle picks the latest protocol version in which pickling is done in binary format</li>
+</ul>
 
-<p>This is what I wrote:
-<script src="https://gist.github.com/abhinav1107/6ea9d7a3f288d6c8e65f6333023602f4.js"></script></p>
+<p>Enough with the talk, lets see it in action. I am taking Elasticsearch connection object as an example here, because that&rsquo;s what I was working with when I was trying to figure out pickle.</p>
 
-<p>It was supposed to be a <a href="https://sensu.io/">Sensu</a> check. And as of this writing, running script is almost same. This JIRA ticket made me realise that you should always pick the right tool for the job, not the tool that you are most comfortable with all the time.</p>
+<p>I am a big fan of <a href="https://www.vagrantup.com/">Vagrant</a> and <a href="https://www.docker.com/">Docker</a> for local work. Here I am using a 5 Docker containers for my overall tests. 2 containers for Elasticsearch, 1 for Redis and 2 normal Python nodes as clients from where I can perform pickling process in one and un-pickling in another.</p>
 
-<p>Picking Python as my first full fledged programming language was a no brainer. One of the biggest plus points for me was that the syntax made sense out of the box. I didn&rsquo;t have to struggle through online documentation of finding what is what. I know a lot of you might not or will not agree. But this is what I feel was the biggest reason for me. here is what I wrote as my first script in Python:</p>
+<p>Here is how the docker compose and corresponding Dockerfile looks like:</p>
 
-<script src="https://gist.github.com/abhinav1107/471df18abf140dc816902a249be419cf.js"></script>
+<script src="https://gist.github.com/abhinav1107/25f326c4fb59dfdff95d12cb226d15f5.js"></script>
 
-<p>I was literally on the Moon after this script executed successfully for the first time. But this was still not enough. I would end up writing a lot of scripts. Most of these scripts had overlapping work or use cases. Writing something once is good, writing something twice is still ok, but writing same thing again and again is not ok. This is where <a href="https://en.wikipedia.org/wiki/Object-oriented_programming">OOP</a> comes in. I had tried understanding OOP before, but miserably failed at it. Every time I asked someone how did they got better at writing Classes, they gave the same answer. Keep practicing. And this never convinced me. To me it was like a continuous loop problem. To be able to understand OOP, you need to write Classes and to be able to write Classes, you need to understand OOP.</p>
+<p>Copying this two files in a directory and running <code>docker-compose up -d</code> should ideally give you 5 running containers:</p>
 
-<p>This struggle with Classes continued, in the meanwhile I wrote some Sensu Scripts in Python which worked really well. While working with one of the Sensu Checks, I ended up asking a <a href="https://goo.gl/qhxs6p">Stackoverflow Question</a>. The more work I did in Python, my confidence grew more. At this point, I started reading other&rsquo;s work in Python. This is where things started becoming interesting. Every new Class helped me understand what it meant and what the programmer was trying to achieve. And thus my OOP journey began. As of now, I can write simple reusable Classes and create packages. The idea is to be more comfortable with Python as a programming language.</p>
+<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/109446163@N05/42557972284/in/dateposted-public/" title="pickling-1-es-run"><img src="https://farm2.staticflickr.com/1821/42557972284_512f8a885e_z.jpg" width="800" alt="pickling-1-es-run"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p>In last few days, this ability to at least understand the code (irrespective of the programming language it&rsquo;s written in) has given me a different kind of self confidence. I try and see things differently now. The code doesn&rsquo;t scare me anymore. The kind of work that I do on a day-to-day basis, this procedural approach is never going to go away, but I am loving the OOP way.</p>
+<p>Now that we have something to work with, lets connect to one test container and pickle an object. In my case, I have called this container <code>pclient1</code>, so I will connect to this one. The following picture shows the commands that I ran:</p>
 
-<p>The lesson from all this is nothing is easy and nothing is hard in this world. It&rsquo;s about how dedicated you are to achieve things. Don&rsquo;t lose faith in your self just because you have had some early set backs. Keep doing things. Start small and gradually build up the knowledge.</p>
+<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/109446163@N05/29406709548/in/dateposted-public/" title="Screen Shot 2018-07-08 at 7.14.53 PM"><img src="https://farm1.staticflickr.com/834/29406709548_3ec8100220_z.jpg" width="800" alt="Screen Shot 2018-07-08 at 7.14.53 PM"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 
-<p>Until next time.</p>
+<p>Basically, what happened here is, I created an object, pickled it using <code>dill.dumps</code> and stored that data in Redis. Now I will connect to other container <code>pclient2</code>, get the value from Redis using the key obtained previously and un-pickle it using <code>dill.loads</code>:</p>
+
+<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/109446163@N05/43276908461/in/dateposted-public/" title="Screen Shot 2018-07-08 at 7.39.13 PM"><img src="https://farm2.staticflickr.com/1821/43276908461_f4eed708dd_z.jpg" width="800" alt="Screen Shot 2018-07-08 at 7.39.13 PM"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p>Once I recreated the object using <code>dill.loads</code>, I can use it just like the way I used it in <code>pclient1</code>. And all these without even needing to import <code>elasticsearch</code> module in another instance.</p>
+
+<p>We are using this style in one of our in-house REST API written using <a href="https://falconframework.org/">Falcon</a>, where there are multiple instances behind a load balancer. All we need to do now is initiate an object, pickle it, store that data in Redis and pass the client that key. Irrespective of which backend instance the client will go in subsequent requests, we can use the same connection object.</p>
+
+<blockquote>
+<p><i><u>Some Word Of Caution</u>: This entire model is in its super early stages at my work. We are still concept proofing this. So, this entire structure can change in future. but I have solid hopes on this (concept wise), unless we/I missed something really basic here. In which case, I will update this article as and when required. For now, I am really excited to have implemented it. And thought about sharing my learning experience with the world. If you are reading this and planning to implement something like this, ensure you are aware of what you are getting into. :)</i></p>
+</blockquote>
+
+<p>Until next time. Happy reading.</p>
 
                     </div>
 
@@ -186,13 +203,17 @@
                                     <span class="label label-default">python</span>
                                 </a>
                             
+                                <a href="https://abhinav1107.github.io/categories/pickle">
+                                    <span class="label label-default">pickle</span>
+                                </a>
+                            
                         </center>
                     </div>
 
                     
                     
                     <div class="entry-content text-center">
-                        <img src="../img/how-learning-python-has-changed-my-life-summary.jpg" alt="Summary How learning Python has changed my life" />
+                        <img src="../img/python-data-serialization-summary.jpg" alt="Summary Python Serialization with Dill" />
                     </div>
                     
 
@@ -215,9 +236,9 @@
                          data-network="twitter"
                          data-url=""
                          data-short-url=""
-                         data-title="How learning Python has changed my life >>"
+                         data-title="Python Serialization with Dill >>"
                          data-image=""
-                         data-description="My slow but steady transition from a sysadmin to a better sysadmin or a DevOps"
+                         data-description="Converting data structure or objects state in python into a format that can be stored/transmitted and recreated later"
                          data-username="abhinav1107"
                          data-message="">
                         <i class="fa fa-twitter-square fa-2x"></i>
@@ -233,9 +254,9 @@
                          data-network="linkedin"
                          data-url=""
                          data-short-url=""
-                         data-title="How learning Python has changed my life >>"
+                         data-title="Python Serialization with Dill >>"
                          data-image=""
-                         data-description="My slow but steady transition from a sysadmin to a better sysadmin or a DevOps"
+                         data-description="Converting data structure or objects state in python into a format that can be stored/transmitted and recreated later"
                          data-username="abhinav1107"
                          data-message="">
                         <i class="fa fa-linkedin-square fa-2x"></i>
@@ -249,16 +270,16 @@
                          data-network=""
                          data-url=""
                          data-short-url=""
-                         data-title="How learning Python has changed my life >>"
+                         data-title="Python Serialization with Dill >>"
                          data-image=""
-                         data-description="My slow but steady transition from a sysadmin to a better sysadmin or a DevOps"
+                         data-description="Converting data structure or objects state in python into a format that can be stored/transmitted and recreated later"
                          data-username="abhinav1107"
                          data-message="">
                         <i class="fa fa-rss-square fa-2x"></i>
                     </div>
                 
             
-            <div class="st-custom-button" data-network="sharethis" data-title="How learning Python has changed my life >> ">
+            <div class="st-custom-button" data-network="sharethis" data-title="Python Serialization with Dill >> ">
                 <i class="fa fa-share-alt-square fa-2x"></i>
             </div>
         
@@ -304,7 +325,7 @@ s.setAttribute('data-timestamp', +new Date());
                 
                     <ul class="pagination">
                         <li>
-                            <a href="https://abhinav1107.github.io/blog/hello-world/" rel="prev" title="Hello World!" aria-label="Previous">
+                            <a href="https://abhinav1107.github.io/blog/auto-update-a-python-package-using-git-repository/" rel="prev" title="Auto update a Python package using Git repository" aria-label="Previous">
                                 <i class="fa fa-angle-double-left" aria-hidden="true"></i> <i>Previous article</i>
                             </a>
                         </li>
@@ -312,14 +333,6 @@ s.setAttribute('data-timestamp', +new Date());
                 
             </div>
             <div class="col-xs-6 col-sm-4 text-right">
-                
-                    <ul class="pagination">
-                        <li>
-                            <a href="https://abhinav1107.github.io/blog/auto-update-a-python-package-using-git-repository/" rel="next" title="Auto update a Python package using Git repository" aria-label="Next">
-                                <i>Next article</i> <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                    </ul>
                 
             </div>
         </div>

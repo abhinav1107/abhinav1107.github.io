@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Learning on Abhinav.Kumar</title>
-    <link>https://abhinav1107.github.io/categories/learning/</link>
-    <description>Recent content in Learning on Abhinav.Kumar</description>
+    <title>Dill on Abhinav.Kumar</title>
+    <link>https://abhinav1107.github.io/tags/dill/</link>
+    <description>Recent content in Dill on Abhinav.Kumar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright>
     <lastBuildDate>Sun, 08 Jul 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://abhinav1107.github.io/categories/learning/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://abhinav1107.github.io/tags/dill/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -20,16 +20,6 @@
       <guid>https://abhinav1107.github.io/blog/python-data-serialization/</guid>
       <description>Last week I got to know about a concept called Serialization through a colleague of mine. Till that point, I wasn&amp;rsquo;t even aware something like this existed. And I really liked the concept. So, to better understand it, I thought I will pen it down somewhere. This is my attempt to write what I have understood about pickling
 &amp;ldquo;Pickling&amp;rdquo; is a process where a Python object is taken and converted into a byte stream.</description>
-    </item>
-    
-    <item>
-      <title>How learning Python has changed my life</title>
-      <link>https://abhinav1107.github.io/blog/how-learning-python-has-changed-my-life/</link>
-      <pubDate>Mon, 14 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://abhinav1107.github.io/blog/how-learning-python-has-changed-my-life/</guid>
-      <description>Hello there,
-Today I would like to share my Python learning journey with you. Before I even begin, I would like to make it clear that I in no way am a master of Python programming language. I have just been able to scratch the surface of an extremely vast topic. It&amp;rsquo;s just the beginning and I have a long long long way to go. But there is a reason why I wanted to share this learning journey with everyone.</description>
     </item>
     
   </channel>

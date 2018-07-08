@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright>
-    <lastBuildDate>Sun, 20 May 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 08 Jul 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://abhinav1107.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -19,6 +19,16 @@
       
       <guid>https://abhinav1107.github.io/about/</guid>
       <description>If I have to describe myself professionally in one sentence, I would probably say &amp;ldquo;I fix things&amp;rdquo;. This is not something of a trait that I picked along working. I have been fixing things as long as I could remember. My oldest memory related to fixing something is from 4th standard. I came home from school and wanted to &amp;ldquo;fix&amp;rdquo; a fused bulb. Somehow attached the filament and inserted it in its socket.</description>
+    </item>
+    
+    <item>
+      <title>Python Serialization with Dill</title>
+      <link>https://abhinav1107.github.io/blog/python-data-serialization/</link>
+      <pubDate>Sun, 08 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://abhinav1107.github.io/blog/python-data-serialization/</guid>
+      <description>Last week I got to know about a concept called Serialization through a colleague of mine. Till that point, I wasn&amp;rsquo;t even aware something like this existed. And I really liked the concept. So, to better understand it, I thought I will pen it down somewhere. This is my attempt to write what I have understood about pickling
+&amp;ldquo;Pickling&amp;rdquo; is a process where a Python object is taken and converted into a byte stream.</description>
     </item>
     
     <item>
