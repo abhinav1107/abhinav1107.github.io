@@ -18,8 +18,8 @@
       <pubDate>Sun, 08 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>https://abhinav1107.github.io/blog/python-data-serialization/</guid>
-      <description>Last week I got to know about a concept called Serialization through a colleague of mine. Till that point, I wasn&amp;rsquo;t even aware something like this existed. And I really liked the concept. So, to better understand it, I thought I will pen it down somewhere. This is my attempt to write what I have understood about pickling
-&amp;ldquo;Pickling&amp;rdquo; is a process where a Python object is taken and converted into a byte stream.</description>
+      <description>Last week I got to know about a concept called Serialization through a friend of mine. Till that point I wasn&amp;rsquo;t even aware something like this existed. I really liked the concept instantly. So to better understand this concept, I thought I will pen it down somewhere. This is my attempt to write what I have understood about pickling.
+&amp;ldquo;Pickling&amp;rdquo; is a process where a Python object is taken and converted into byte stream.</description>
     </item>
     
     <item>
