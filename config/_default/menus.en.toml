@@ -1,0 +1,120 @@
+# -- Main Menu --
+# The main menu is displayed in the header at the top of the page.
+# Acceptable parameters are name, pageRef, page, url, title, weight.
+#
+# The simplest menu configuration is to provide:
+#   name = The name to be displayed for this menu link
+#   pageRef = The identifier of the page or section to link to
+#
+# By default the menu is ordered alphabetically. This can be
+# overridden by providing a weight value. The menu will then be
+# ordered by weight from lowest to highest.
+
+[[main]]
+  name = "About"
+  pageRef = "about"
+  weight = 10
+
+[[main]]
+  name = "Blog"
+  pageRef = "posts"
+  weight = 15
+
+[[main]]
+  identifier = "Useful Links"
+  pre = "link"
+  weight = 25
+
+[[main]]
+  name = "Hugo"
+  parent = "Useful Links"
+  url = "https://gohugo.io/documentation/"
+  weight = 51
+
+[[main]]
+  name = "Blowfish"
+  parent = "Useful Links"
+  url = "https://blowfish.page/"
+  weight = 52
+
+[[main]]
+  name = "FlowCV"
+  parent = "Useful Links"
+  url = "https://flowcv.com/"
+  weight = 53
+
+[[main]]
+  name = "ImgBB"
+  parent = "Useful Links"
+  url = "https://imgbb.com/"
+  weight = 54
+
+[[main]]
+  name = "Pixabay"
+  parent = "Useful Links"
+  url = "https://pixabay.com/"
+  weight = 55
+
+[[main]]
+  name = "Unsplash"
+  parent = "Useful Links"
+  url = "https://unsplash.com/"
+  weight = 56
+
+[[main]]
+  name = "iLoveIMG"
+  parent = "Useful Links"
+  url = "https://www.iloveimg.com/"
+  weight = 57
+
+[[main]]
+  name = "Convertio"
+  parent = "Useful Links"
+  url = "https://convertio.co/"
+  weight = 58
+
+[[main]]
+  name = "CloudConvert"
+  parent = "Useful Links"
+  url = "https://cloudconvert.com/"
+  weight = 59
+
+[[main]]
+  name = "ssl-check"
+  parent = "Useful Links"
+  url = "https://tools.keycdn.com/ssl"
+  weight = 59
+
+[[main]]
+  name = "favicon"
+  parent = "Useful Links"
+  url = "https://favicon.io/"
+  weight = 60
+
+[[main]]
+  name = "logo"
+  parent = "Useful Links"
+  url = "https://logo.com/"
+  weight = 61
+
+[[main]]
+  identifier = "GitHub"
+  pre = "github"
+  url = "https://github.com/abhinav1107/abhinav1107.github.io"
+  weight = 99
+
+[[main]]
+  identifier = "RSS"
+  pre = "rss"
+  url = "https://abhinav.ltd/index.xml"
+  weight = 100
+
+[[footer]]
+  name = "Tags"
+  pageRef = "tags"
+  weight = 10
+
+[[footer]]
+  name = "Categories"
+  pageRef = "categories"
+  weight = 20
