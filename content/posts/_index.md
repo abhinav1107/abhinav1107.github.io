@@ -1,7 +1,7 @@
 ---
 title: "Blog"
 slug: "posts"
-date: 2024-11-01T08:54:34+05:30
+date: 2022-06-13T20:55:37+01:00
 draft: false
 
 showDate : true

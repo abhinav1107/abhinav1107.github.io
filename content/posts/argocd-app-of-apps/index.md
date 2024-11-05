@@ -4,7 +4,7 @@ slug: argocd-app-of-apps
 summary: "ArgoCD App of Apps using GitOps"
 tags: ["argocd", "bootstraping", "gitops"]
 categories: ["gitops", "argocd", "kubernetes"]
-date: 2024-11-01T09:24:53+05:30
+date: 2024-02-10T09:24:53+05:30
 ---
 > Update:
 >

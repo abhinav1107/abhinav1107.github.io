@@ -1,9 +1,10 @@
 ---
 title: "Direnv"
+slug: direnv
 summary: "Appreciation post for direnv"
 tags: ["direnv", "shell-hacks", "tips-and-tricks"]
 categories: ["productivity", "shell", "customisation"]
-date: 2024-11-01T09:24:53+05:30
+date: 2024-01-04T09:24:53+05:30
 ---
 I have recently been introduced to [direnv](https://direnv.net) by one of my friends. And boy-oh-boy am I grateful about finding this.
 
