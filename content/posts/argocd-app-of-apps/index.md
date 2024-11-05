@@ -178,4 +178,4 @@ That's it. From next time onwards, I just have to add files in this `argocd-apps
 
 This whole setup has been working really well for us. Now, we don't need to run any Jenkins job. GitOps all the way.
 
-Until next time. Peace :victory_hand:
+Until next time. Peace :v:!
