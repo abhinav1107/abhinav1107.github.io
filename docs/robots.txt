@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://abhinav1107.github.io/sitemap.xml
