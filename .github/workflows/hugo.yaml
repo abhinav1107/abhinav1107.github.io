@@ -1,39 +1,39 @@
-# .github/workflows/gh-pages.yml
-name: GitHub Pages Workflow
+# # .github/workflows/gh-pages.yml
+# name: GitHub Pages Workflow
 
-on:
-  push:
-    branches:
-      - main
+# on:
+#   push:
+#     branches:
+#       - main
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    concurrency:
-      group: ${{ github.workflow }}-${{ github.ref }}
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          submodules: true
-          fetch-depth: 0
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+#     concurrency:
+#       group: ${{ github.workflow }}-${{ github.ref }}
+#     steps:
+#       - name: Checkout
+#         uses: actions/checkout@v4
+#         with:
+#           submodules: true
+#           fetch-depth: 0
 
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v3
-        with:
-          hugo-version: "0.147.8"
-          extended: true
+#       - name: Setup Hugo
+#         uses: peaceiris/actions-hugo@v3
+#         with:
+#           hugo-version: "0.147.8"
+#           extended: true
 
-      - name: Build
-        env:
-          HUGO_ENVIRONMENT: production
-          HUGO_ENV: production
-        run: |
-          hugo --gc --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
+#       - name: Build
+#         env:
+#           HUGO_ENVIRONMENT: production
+#           HUGO_ENV: production
+#         run: |
+#           hugo --gc --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
-          publish_branch: gh-pages
+#       - name: Deploy to GitHub Pages
+#         uses: peaceiris/actions-gh-pages@v4
+#         with:
+#           github_token: ${{ secrets.GITHUB_TOKEN }}
+#           publish_dir: ./public
+#           publish_branch: gh-pages
