@@ -1,0 +1,16 @@
+# config/_default/privacy.toml
+
+[privacy]
+  [privacy.disqus]
+    disable = true
+  [privacy.googleAnalytics]
+    disable = false
+    respectDoNotTrack = true
+
+  [privacy.instagram]
+    disable = true
+    simple  = true
+
+  [privacy.youtube]
+    disable = false
+    privacyEnhanced = true
