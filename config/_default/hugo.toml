@@ -19,6 +19,8 @@ googleAnalytics = "G-XPX5285SYN"
 
 [imaging]
   anchor = 'Center'
+  quality = 75
+  resampleFilter = "CatmullRom"
 
 [taxonomies]
   tag = "tags"
