@@ -7,6 +7,7 @@
 
 [highlight]
   noClasses = false
+  style = "monokai"
 
 [tableOfContents]
   startLevel = 2
