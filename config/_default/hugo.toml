@@ -5,11 +5,12 @@
 theme = "blowfish"
 baseURL = "https://abhinav.ltd/"
 defaultContentLanguage = "en"
+canonifyURLs = true
 
 enableRobotsTXT = true
 enableEmoji = true
-paginate = 10
-summaryLength = 0
+# paginate = 10
+summaryLength = 70
 buildDrafts = false
 buildFuture = false
 
