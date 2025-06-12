@@ -81,7 +81,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: awscli
-  namespace: cipherops
+  namespace: $NAMESPACE
 spec:
   replicas: 1
   selector:
@@ -92,7 +92,7 @@ spec:
       labels:
         app: awscli
     spec:
-      serviceAccountName: ciops-services-sa
+      serviceAccountName: $SERVICEACCOUNT
       containers:
         - name: awscli
           image: amazonlinux:2023
