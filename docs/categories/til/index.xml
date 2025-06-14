@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>TIL on One Step Forward</title><link>https://abhinav1107.github.io/categories/til/</link><description>Recent content in TIL on One Step Forward</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>&amp;copy; 2023 - 2025 &lt;a href="https://abhinav1107.github.io/">Abhinav.K&lt;/a> &lt;a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0&lt;/a></copyright><lastBuildDate>Sun, 15 Jun 2025 03:04:53 +0530</lastBuildDate><atom:link href="https://abhinav1107.github.io/categories/til/index.xml" rel="self" type="application/rss+xml"/><item><title>Simulate AWS Services Locally with LocalStack</title><link>https://abhinav1107.github.io/posts/localstack-getting-started/</link><pubDate>Sun, 15 Jun 2025 03:04:53 +0530</pubDate><guid>https://abhinav1107.github.io/posts/localstack-getting-started/</guid><description>&lt;p>Simulate AWS services on local machine for faster development and testing.&lt;/p>
+&lt;h2 class="relative group">What is LocalStack
+&lt;div id="what-is-localstack" class="anchor">&lt;/div>
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+style="text-decoration-line: none !important;" href="#what-is-localstack" aria-label="Anchor">#&lt;/a>
+&lt;/span>
+&lt;/h2>
+&lt;p>In my day-to-day work, I need to interact with several AWS services (like S3, Route53, etc). When I am working locally, I do not have access to a full-fledged AWS account. Because doing so would incur additional costs and require constant internet access.&lt;/p></description></item></channel></rss>

@@ -1,4 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>One-Step Forward on One Step Forward</title><link>https://abhinav1107.github.io/</link><description>Recent content in One-Step Forward on One Step Forward</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>&amp;copy; 2023 - 2025 &lt;a href="https://abhinav1107.github.io/">Abhinav.K&lt;/a> &lt;a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0&lt;/a></copyright><lastBuildDate>Tue, 10 Jun 2025 11:04:53 +0530</lastBuildDate><atom:link href="https://abhinav1107.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>EKS Pod Identity</title><link>https://abhinav1107.github.io/posts/eks-pod-identity/</link><pubDate>Tue, 10 Jun 2025 11:04:53 +0530</pubDate><guid>https://abhinav1107.github.io/posts/eks-pod-identity/</guid><description>A Practical Guide to Amazon EKS Pod Identity</description></item><item><title>ArgoCD App of Apps</title><link>https://abhinav1107.github.io/posts/argocd-app-of-apps/</link><pubDate>Sat, 10 Feb 2024 09:24:53 +0530</pubDate><guid>https://abhinav1107.github.io/posts/argocd-app-of-apps/</guid><description>ArgoCD App of Apps using GitOps</description></item><item><title>Favourite Quotes</title><link>https://abhinav1107.github.io/quotes/</link><pubDate>Tue, 06 Feb 2024 09:24:53 +0530</pubDate><guid>https://abhinav1107.github.io/quotes/</guid><description>My Favourite Quotes. Collected from here and there.</description></item><item><title>Direnv</title><link>https://abhinav1107.github.io/posts/direnv/direnv/</link><pubDate>Thu, 04 Jan 2024 09:24:53 +0530</pubDate><guid>https://abhinav1107.github.io/posts/direnv/direnv/</guid><description>Appreciation post for direnv</description></item><item><title>Restarting Pods on ConfigMap or Secret Updates</title><link>https://abhinav1107.github.io/posts/reloader/</link><pubDate>Sat, 23 Dec 2023 17:51:07 +0530</pubDate><guid>https://abhinav1107.github.io/posts/reloader/</guid><description>How to use reloader to restart a pod automatically when it&amp;rsquo;s ConfigMap or Secret changes</description></item><item><title>First Blog Post</title><link>https://abhinav1107.github.io/posts/hello/</link><pubDate>Thu, 21 Dec 2023 09:24:53 +0530</pubDate><guid>https://abhinav1107.github.io/posts/hello/</guid><description>My first of hopefully more than one blog posts</description></item><item><title>Introduction</title><link>https://abhinav1107.github.io/about/</link><pubDate>Thu, 21 Dec 2023 08:54:34 +0530</pubDate><guid>https://abhinav1107.github.io/about/</guid><description>&lt;p>Hello there.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>One-Step Forward on One Step Forward</title><link>https://abhinav1107.github.io/</link><description>Recent content in One-Step Forward on One Step Forward</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>&amp;copy; 2023 - 2025 &lt;a href="https://abhinav1107.github.io/">Abhinav.K&lt;/a> &lt;a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0&lt;/a></copyright><lastBuildDate>Sun, 15 Jun 2025 03:04:53 +0530</lastBuildDate><atom:link href="https://abhinav1107.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Simulate AWS Services Locally with LocalStack</title><link>https://abhinav1107.github.io/posts/localstack-getting-started/</link><pubDate>Sun, 15 Jun 2025 03:04:53 +0530</pubDate><guid>https://abhinav1107.github.io/posts/localstack-getting-started/</guid><description>&lt;p>Simulate AWS services on local machine for faster development and testing.&lt;/p>
+&lt;h2 class="relative group">What is LocalStack
+&lt;div id="what-is-localstack" class="anchor">&lt;/div>
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+style="text-decoration-line: none !important;" href="#what-is-localstack" aria-label="Anchor">#&lt;/a>
+&lt;/span>
+&lt;/h2>
+&lt;p>In my day-to-day work, I need to interact with several AWS services (like S3, Route53, etc). When I am working locally, I do not have access to a full-fledged AWS account. Because doing so would incur additional costs and require constant internet access.&lt;/p></description></item><item><title>EKS Pod Identity</title><link>https://abhinav1107.github.io/posts/eks-pod-identity/</link><pubDate>Tue, 10 Jun 2025 11:04:53 +0530</pubDate><guid>https://abhinav1107.github.io/posts/eks-pod-identity/</guid><description>A Practical Guide to Amazon EKS Pod Identity</description></item><item><title>ArgoCD App of Apps</title><link>https://abhinav1107.github.io/posts/argocd-app-of-apps/</link><pubDate>Sat, 10 Feb 2024 09:24:53 +0530</pubDate><guid>https://abhinav1107.github.io/posts/argocd-app-of-apps/</guid><description>ArgoCD App of Apps using GitOps</description></item><item><title>Favourite Quotes</title><link>https://abhinav1107.github.io/quotes/</link><pubDate>Tue, 06 Feb 2024 09:24:53 +0530</pubDate><guid>https://abhinav1107.github.io/quotes/</guid><description>My Favourite Quotes. Collected from here and there.</description></item><item><title>Direnv</title><link>https://abhinav1107.github.io/posts/direnv/direnv/</link><pubDate>Thu, 04 Jan 2024 09:24:53 +0530</pubDate><guid>https://abhinav1107.github.io/posts/direnv/direnv/</guid><description>Appreciation post for direnv</description></item><item><title>Restarting Pods on ConfigMap or Secret Updates</title><link>https://abhinav1107.github.io/posts/reloader/</link><pubDate>Sat, 23 Dec 2023 17:51:07 +0530</pubDate><guid>https://abhinav1107.github.io/posts/reloader/</guid><description>How to use reloader to restart a pod automatically when it&amp;rsquo;s ConfigMap or Secret changes</description></item><item><title>First Blog Post</title><link>https://abhinav1107.github.io/posts/hello/</link><pubDate>Thu, 21 Dec 2023 09:24:53 +0530</pubDate><guid>https://abhinav1107.github.io/posts/hello/</guid><description>My first of hopefully more than one blog posts</description></item><item><title>Introduction</title><link>https://abhinav1107.github.io/about/</link><pubDate>Thu, 21 Dec 2023 08:54:34 +0530</pubDate><guid>https://abhinav1107.github.io/about/</guid><description>&lt;p>Hello there.&lt;/p>
 &lt;p>My name is &lt;strong>Abhinav&lt;/strong> (&lt;em>Devanagari&lt;/em>: &lt;strong>अभिनव&lt;/strong> / &lt;em>Kannada&lt;/em>: &lt;strong>ಅಭಿನವ್&lt;/strong>). I&amp;rsquo;m a DevOps engineer based in Bengaluru (India). I&amp;rsquo;m highly skilled in DevOps practices, containerization and writing production automation. I have a passion for innovation and strong attention to detail. I enjoy coming up with elegant solutions to challenging problems.&lt;/p>
 &lt;h2 class="relative group">Recent Experiences
 &lt;div id="recent-experiences" class="anchor">&lt;/div>
@@ -346,39 +355,6 @@ BASH, Ansible, Jenkins, AWS
 &lt;li>
 &lt;div class="flex flex-start">
 &lt;div class="bg-primary-500 dark:bg-primary-300 text-neutral-50 dark:text-neutral-700 min-w-[30px] h-8 text-2xl flex items-center justify-center rounded-full -ml-12 mt-5">
-&lt;span class="relative block icon">
-&lt;?xml version="1.0" standalone="no"?>
-&lt;!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
-"http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
-&lt;svg version="1.0" xmlns="http://www.w3.org/2000/svg"
-width="225.000000pt" height="225.000000pt" viewBox="0 0 225.000000 225.000000"
-preserveAspectRatio="xMidYMid meet">
-&lt;g transform="translate(0.000000,225.000000) scale(0.100000,-0.100000)"
-fill="#000000" stroke="none">
-&lt;path d="M1211 2117 c-8 -10 -9 -22 -4 -31 13 -24 645 -641 670 -654 66 -36
-143 12 143 88 0 39 -6 48 -72 117 -40 42 -157 155 -259 253 l-186 178 -84 26
-c-112 35 -190 44 -208 23z"/>
-&lt;path d="M791 2089 c-29 -10 -60 -24 -67 -30 -33 -27 -14 -54 178 -246 182
--182 195 -193 230 -193 56 0 103 45 103 97 0 38 -9 49 -164 211 -148 153 -183
-183 -216 181 -5 0 -34 -9 -64 -20z"/>
-&lt;path d="M424 1871 c-47 -29 -87 -86 -80 -114 3 -13 314 -330 700 -715 558
--556 700 -692 721 -692 36 0 115 80 115 117 0 24 -108 136 -698 726 -383 383
--704 697 -712 697 -8 0 -29 -9 -46 -19z"/>
-&lt;path d="M1270 1554 c-28 -6 -50 -30 -50 -54 0 -9 176 -186 390 -394 364 -351
-393 -377 423 -374 30 3 32 7 55 77 19 61 21 80 11 100 -10 24 -629 614 -663
-633 -19 11 -131 18 -166 12z"/>
-&lt;path d="M156 1488 c-23 -37 -47 -133 -39 -155 5 -12 105 -112 223 -224 118
--111 265 -251 326 -310 123 -118 143 -127 255 -117 62 6 87 27 73 63 -5 14
--182 191 -393 395 -278 267 -391 370 -408 370 -12 0 -29 -10 -37 -22z"/>
-&lt;path d="M260 807 c-32 -16 -63 -77 -55 -110 4 -14 115 -133 258 -275 l252
--250 85 -26 c47 -15 115 -30 153 -33 66 -6 67 -5 67 18 0 23 -208 237 -571
-587 -112 108 -132 117 -189 89z"/>
-&lt;path d="M1024 586 c-67 -67 -44 -105 200 -345 115 -113 116 -114 155 -107 60
-9 128 42 136 65 3 11 2 28 -4 38 -5 10 -92 100 -193 201 -174 172 -186 182
--222 182 -30 0 -45 -7 -72 -34z"/>
-&lt;/g>
-&lt;/svg>
-&lt;/span>
 &lt;/div>
 &lt;div class="block p-6 rounded-lg shadow-2xl min-w-full ml-6 mb-10 break-words">
 &lt;div class="flex justify-between">
